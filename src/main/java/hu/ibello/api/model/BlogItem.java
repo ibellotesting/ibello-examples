@@ -8,10 +8,10 @@ import java.util.List;
 public class BlogItem {
     private String id;
     private List<String> ids;
-    private Author author;
-    private Title title;
-    private Description description;
-    private Keywords keywords;
+    private TranslatedContent author;
+    private TranslatedContent title;
+    private TranslatedContent description;
+    private TranslatedContent keywords;
     private List<String> links;
     private String date;
     private Boolean active;
@@ -32,35 +32,35 @@ public class BlogItem {
         this.ids = ids;
     }
 
-    public Author getAuthor() {
+    public TranslatedContent getAuthor() {
         return author;
     }
 
-    public void setAuthor(Author author) {
+    public void setAuthor(TranslatedContent author) {
         this.author = author;
     }
 
-    public Title getTitle() {
+    public TranslatedContent getTitle() {
         return title;
     }
 
-    public void setTitle(Title title) {
+    public void setTitle(TranslatedContent title) {
         this.title = title;
     }
 
-    public Description getDescription() {
+    public TranslatedContent getDescription() {
         return description;
     }
 
-    public void setDescription(Description description) {
+    public void setDescription(TranslatedContent description) {
         this.description = description;
     }
 
-    public Keywords getKeywords() {
+    public TranslatedContent getKeywords() {
         return keywords;
     }
 
-    public void setKeywords(Keywords keywords) {
+    public void setKeywords(TranslatedContent keywords) {
         this.keywords = keywords;
     }
 

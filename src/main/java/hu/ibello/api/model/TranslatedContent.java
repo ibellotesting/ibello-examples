@@ -3,7 +3,7 @@ package hu.ibello.api.model;
 import hu.ibello.data.Model;
 
 @Model
-public class Keywords {
+public class TranslatedContent {
     private String hu;
     private String en;
 
