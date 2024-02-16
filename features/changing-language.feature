@@ -1,3 +1,4 @@
+# language: en
 # namespace: Language
 @full-test @language
 Feature: Test for changing language
