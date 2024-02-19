@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class GetBlogItemSteps extends AbstractApiSteps<Long, BlogItems> {
 
-    public void call_endpoint_with_parameter_$(Long input) throws IOException, TransformerException {
+    public void call_endpoint_with_parameter_$(Long input) throws IOException {
         sendAndReceive(input);
     }
 

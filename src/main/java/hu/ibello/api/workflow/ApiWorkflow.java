@@ -11,7 +11,7 @@ import java.io.IOException;
 public class ApiWorkflow extends StepLibrary {
 	private GetBlogItemSteps getBlog;
 
-	public void I_query_the_blog_articles() throws IOException, TransformerException {
+	public void I_query_the_blog_articles() throws IOException {
 		getBlog.call_endpoint_with_parameter_$(null);
 	}
 
