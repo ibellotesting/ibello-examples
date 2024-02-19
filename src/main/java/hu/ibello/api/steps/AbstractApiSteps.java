@@ -1,18 +1,15 @@
 package hu.ibello.api.steps;
 
-import hu.ibello.api.model.ApiResponse;
 import hu.ibello.apitest.HttpMethod;
 import hu.ibello.apitest.HttpResponse;
 import hu.ibello.apitest.RestClient;
 import hu.ibello.core.TestException;
-import hu.ibello.transform.TransformerException;
 
 import java.io.IOException;
 
 public abstract class AbstractApiSteps<INPUT, OUTPUT> extends AbstractSteps{
 
     private INPUT input;
-    private ApiResponse error;
     private HttpResponse<OUTPUT> httpResponse;
 
     protected OUTPUT getOutput() {
@@ -21,14 +18,9 @@ public abstract class AbstractApiSteps<INPUT, OUTPUT> extends AbstractSteps{
 
     protected abstract Class<OUTPUT>getOutputType();
 
-    protected void sendAndReceive(INPUT input) throws IOException, TransformerException {
-        clear();
+    protected void sendAndReceive(INPUT input) throws IOException {
         this.input = input;
         httpResponse = getRestClient().sendAndReceive(getOutputType());
-    }
-
-    protected void clear() {
-        error = null;
     }
 
     protected String getMimeType() {
