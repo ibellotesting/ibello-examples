@@ -73,6 +73,7 @@ public class LanguageSteps extends StepLibrary {
                         list_is_displayed(data.getHungarianTexts());
                         list_is_not_displayed(data.getEnglishTexts());
                     }
+                    break;
                 case ENGLISH:
                     if (isDefault) {
                         list_is_displayed(data.getHungarianTexts());
