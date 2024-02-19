@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'hu.ibello:ibello-gradle-plugin:1.3'
+    }
+}
+
+plugins {
+    id 'java-library'
+}
+
+apply plugin: 'hu.ibello.gradle'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+	mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    api 'hu.ibello:ibello-api:1.21.1'
+    implementation 'org.assertj:assertj-core:3.22.0'
+}
+
+task copyAssertJJar(type: Copy) {
+    from configurations.compileClasspath
+    into 'build/lib'
+    exclude 'ibello-api*.jar'
+}
+
+build.dependsOn copyAssertJJar

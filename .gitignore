@@ -1,3 +1,5 @@
 /target/
 /ibello/results/
 /.idea/
+/build/
+/.gradle/
