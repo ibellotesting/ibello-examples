@@ -3,17 +3,16 @@ package hu.ibello.api.steps;
 import hu.ibello.api.model.BlogItem;
 import hu.ibello.api.model.BlogItems;
 import hu.ibello.apitest.HttpMethod;
-import hu.ibello.transform.TransformerException;
 
 import java.io.IOException;
 
-public class GetBlogItemSteps extends AbstractApiSteps<Long, BlogItems> {
+public class GetBlogItemSteps extends AbstractApiSteps<Object, BlogItems> {
 
-    public void call_endpoint_with_parameter_$(Long input) throws IOException {
-        sendAndReceive(input);
+    public void call_endpoint_without_parameter() throws IOException {
+        sendAndReceive(null);
     }
 
-    public void check_if_response_is_correct() {
+    public void checking__the_response_is_not_empty() {
         assertions().assertThat(getOutput()).isNotNull();
         assertions().assertThat(getOutput().getBlogItems()).isNotNull();
         assertions().assertThat(getOutput().getBlogItems()).isNotEmpty();
@@ -35,7 +34,7 @@ public class GetBlogItemSteps extends AbstractApiSteps<Long, BlogItems> {
     }
 
     @Override
-    protected String getUrlSuffix(Long aLong) {
+    protected String getUrlSuffix(Object obj) {
         return "blog/items";
     }
 
@@ -45,7 +44,7 @@ public class GetBlogItemSteps extends AbstractApiSteps<Long, BlogItems> {
     }
 
     @Override
-    protected Object getRequestBody(Long id) {
+    protected Object getRequestBody(Object obj) {
         return null;
     }
 }
