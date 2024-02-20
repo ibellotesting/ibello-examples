@@ -17,20 +17,20 @@ public class LanguageSteps extends StepLibrary {
     private HomePage homePage;
     private NavigationBarPanel navigationBar;
 
-    public void based_on_$_test_data_i_check_if_the_language_is_default(LanguageSelection data) {
+    public void based_on_$_test_data__i_check_if_the_language_is_default(LanguageSelection data) {
         check_texts_based_on_$_test_data_with_$_boolean(data, true);
     }
 
-    public void based_on_$_test_data_i_check_if_the_language_is_changed(LanguageSelection data) {
+    public void based_on_$_test_data__i_check_if_the_language_is_changed(LanguageSelection data) {
         check_texts_based_on_$_test_data_with_$_boolean(data, false);
     }
 
-    public void based_on_$_test_data_i_select_other_language(LanguageSelection data) {
+    public void based_on_$_test_data__i_select_other_language(LanguageSelection data) {
         checkTestData(data);
         I_select_$_language(data.getLanguage());
     }
 
-    public void based_on_$_test_data_i_select_the_default_language(LanguageSelection data) {
+    public void based_on_$_test_data__i_select_the_default_language(LanguageSelection data) {
         checkTestData(data);
         I_select_$_language(data.getOtherLanguage());
     }
