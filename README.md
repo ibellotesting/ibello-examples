@@ -4,21 +4,18 @@ Example codes for the ibello test automation tool.
 ## Building the project
 You need to build the project before running the tests.  
 
-In case of gradle: 
-```shell 
-./gradlew build
-```  
-In case of maven:
+In case of gradle:  
+Linux: `./gradlew build`  
+Windows: `.\gradlew build`
 
-```shell
-./mvnw install
-```  
+In case of maven:  
+Linux: `./mvnw install`  
+Windows: `.\mvnw install`;
 
 ## Running the tests
-You can use the following command to run all tests:
-```shell
-ibello cucumber -texamples -thu
-```
+You can use the following command to run all tests:  
+`ibello cucumber -texamples -thu`  
+
 The command contains two switches:  
 * `-texamples`: configures ibello to use parameters from `examples.properties`
 * `-thu`: defines default language as Hungarian for Language UI tests 
