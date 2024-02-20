@@ -11,10 +11,5 @@ public abstract class AbstractPage extends PageObject {
         expectations().assume(browser()).toHave().url(pattern);
     }
 
-    protected void expect_url_is_not_$(String url) {
-        Pattern pattern = Pattern.compile(url + ".*");
-        expectations().assume(browser()).toNotHave().url(pattern);
-    }
-
     abstract public void I_am_on_the_page();
 }
