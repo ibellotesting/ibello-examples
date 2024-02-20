@@ -11,7 +11,7 @@ In case of gradle:
 In case of maven:
 
 ```shell
-./mvnw compile install
+./mvnw install
 ```  
 
 ## Running the tests
