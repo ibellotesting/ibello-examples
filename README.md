@@ -20,4 +20,8 @@ The command contains two switches:
 * `-texamples`: configures ibello to use parameters from `examples.properties`
 * `-thu`: defines default language as Hungarian for Language UI tests 
 
-If you want to learn more about switches, you can visit the following page https://www.ibello.hu/documentation-cli.
+If you want to learn more about switches, you can visit the following page https://www.ibello.hu/documentation-cli.  
+
+In case the repository was cloned from git, the following additional switches should be used:  
+* For gradle build: `-tgradle`  
+* For maven build: `-tmaven`
