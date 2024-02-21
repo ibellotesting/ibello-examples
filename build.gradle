@@ -29,10 +29,10 @@ dependencies {
     implementation 'org.assertj:assertj-core:3.22.0'
 }
 
-task copyAssertJJar(type: Copy) {
-    from configurations.compileClasspath
-    into 'build/lib'
+task downloadDependencies(type: Copy, group: 'ibello') {
+    from sourceSets.main.compileClasspath
+    into 'build/lib/'
     exclude 'ibello-api*.jar'
 }
 
-build.dependsOn copyAssertJJar
+build.dependsOn downloadDependencies
