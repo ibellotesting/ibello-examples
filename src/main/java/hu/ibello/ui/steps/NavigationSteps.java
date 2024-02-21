@@ -2,7 +2,6 @@ package hu.ibello.ui.steps;
 
 import hu.ibello.core.Name;
 import hu.ibello.ui.pages.*;
-import hu.ibello.ui.panel.NavigationBarPanel;
 import hu.ibello.steps.StepLibrary;
 
 @Name("Navigation steps")
