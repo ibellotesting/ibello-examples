@@ -9,8 +9,8 @@ Linux: `./gradlew build`
 Windows: `.\gradlew build`
 
 In case of maven:  
-Linux: `./mvnw install`  
-Windows: `.\mvnw install`
+Linux: `./mvnw compile`  
+Windows: `.\mvnw compile`
 
 ## Running the tests
 You can use the following command to run all tests:  
