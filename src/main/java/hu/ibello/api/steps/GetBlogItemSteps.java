@@ -5,6 +5,7 @@ import hu.ibello.api.model.BlogItems;
 import hu.ibello.apitest.HttpMethod;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class GetBlogItemSteps extends AbstractApiSteps<Object, BlogItems> {
 
@@ -13,19 +14,19 @@ public class GetBlogItemSteps extends AbstractApiSteps<Object, BlogItems> {
     }
 
     public void checking__the_response_is_not_empty() {
-        assertions().assertThat(getOutput()).isNotNull();
-        assertions().assertThat(getOutput().getBlogItems()).isNotNull();
-        assertions().assertThat(getOutput().getBlogItems()).isNotEmpty();
+        assertions().assertIsNotNull(getOutput());
+        assertions().assertIsNotNull(getOutput().getBlogItems());
+        assertions().assertIsNotEmpty(getOutput().getBlogItems());
         for (BlogItem blogItem : getOutput().getBlogItems()) {
-            assertions().assertThat(blogItem.getId()).isNotNull();
-            assertions().assertThat(blogItem.getAuthor()).isNotNull();
-            assertions().assertThat(blogItem.getAuthor().getHu()).isNotNull();
-            assertions().assertThat(blogItem.getTitle()).isNotNull();
-            assertions().assertThat(blogItem.getTitle().getHu()).isNotNull();
-            assertions().assertThat(blogItem.getDescription()).isNotNull();
-            assertions().assertThat(blogItem.getDescription().getHu()).isNotNull();
-            assertions().assertThat(blogItem.getKeywords()).isNotNull();
-            assertions().assertThat(blogItem.getActive()).isNotNull();
+            assertions().assertIsNotNull(blogItem.getId());
+            assertions().assertIsNotNull(blogItem.getAuthor());
+            assertions().assertIsNotNull(blogItem.getAuthor().getHu());
+            assertions().assertIsNotNull(blogItem.getTitle());
+            assertions().assertIsNotNull(blogItem.getTitle().getHu());
+            assertions().assertIsNotNull(blogItem.getDescription());
+            assertions().assertIsNotNull(blogItem.getDescription().getHu());
+            assertions().assertIsNotNull(blogItem.getKeywords());
+            assertions().assertIsNotNull(blogItem.getActive());
         }
     }
 
