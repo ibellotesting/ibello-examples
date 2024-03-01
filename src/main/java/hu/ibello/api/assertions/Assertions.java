@@ -15,7 +15,7 @@ public class Assertions {
 
 	public void assertIsNotEmpty(List<?> list) {
 		if (list.isEmpty()) {
-			throw new AssertionError("Given list is null!");
+			throw new AssertionError("Given list is empty!");
 		}
 	}
 
